@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sport Sphere</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .header, .footer {
+            background-color: rgb(4, 7, 67);
+            color: white;
+        }
+        .header h1, .footer p {
+            margin: 0;
+        }
+        .navbar-nav .nav-link {
+            color: white !important;
+        }
+        .nav-link:hover {
+            color: white!important;
+        }
+        .content-section {
+            margin: 20px 0;
+        }
+        .card {
+            border-radius: 15px;
+            border: 1px solid rgb(2, 5, 55);
+        }
+        .card-header {
+            background-color: rgb(0, 3, 56);
+            color: white;
+        }
+        .card-body {
+            background-color: rgb(255, 173, 248);
+        }
+        .score {
+            background-color: white;
+            border: 1px solid rgba(1, 2, 9, 0.3);
+            border-radius: 10px;
+            margin: 10px 0;
+            padding: 10px;
+        }
+        .score h5 {
+            color: rgb(5, 8, 62);
+            margin: 0 0 5px;
+        }
+        .score p {
+            margin: 0;
+            color: darkpink;
+        }
+
+        .score:hover{
+            transform: scale(1.02);
+            transition: all 0.3s ease-in-out;
+            background-color: rgb(196, 225, 255);
+        }
+
+        .card:hover {
+            transform: scale(1.005);
+            transition: all 0.3s ease-in-out;
+            box-shadow: 2px 2px 0px rgb(151, 151, 151);
+        }
+
+        .secondnav {
+            color: black;
+            border-bottom: 4px solid rgb(6, 5, 62);
+        }
+.secondnav .col-3 a:hover{
+background-color: rgb(255, 0, 230);
+}
+
+    </style>
+
+
+</head>
+<body>
+    <div class="top" id="top"></div>
+
+    <a href="#top" style="text-decoration: none; color: rgb(255, 0, 230); position: fixed; bottom: 20px; right: 20px; font-size: 50px; z-index: 1;">
+        <i class="fa-solid fa-caret-up"></i>
+    </a>
+    <!-- HEADER -->
+    <header>
+        <div class="container-fluid bg-dark text-white">
+            <div class="row align-items-center">
+                <div class="col-12 col-md-2 text-center text-md-end bg p-3">
+                    <h1 class="text-white mb-0">Sport</h1>
+                </div>
+                <div class="col-12 col-md-10 bgf p-3">
+                    <div class="d-flex flex-column flex-md-row justify-content-between align-items-center">
+                        <h1 class="text-dark mb-0">Sphere</h1>
+                        <ul class="list-unstyled d-flex justify-content-center justify-content-md-end mb-0">
+                            <li class="nav-item me-3">
+                                <a href="#" class="nav-link text-dark h1 mb-0">Get Sport Sphere</a>
+                            </li>
+                            <li class="nav-item pe-5">
+                                <a href="loginform.html" class="nav-link text-dark h1 mb-0"><i class="fa-solid fa-user pe-1"></i>Log in</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+   <!-- NAVBAR -->
+   <nav class="navbar navbar-expand-lg navbar-light bgg">
+    <div class="container">
+        <a class="navbar-brand d-lg-none" href="#"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+            <ul class="navbar-nav mx-auto">
+                <li class="hoverr nav-item">
+                    <a class="nav-link active text-white" aria-current="page" href="index.html">Home</a>
+                </li>
+                <li class="hoverr nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Sports
+                    </a>
+                    <ul class="dropdown-menu" style="background-color: #00172e;" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item hoverr text-white" href="cricket.html">Cricket</a></li>
+                        <li><a class="dropdown-item hoverr text-white" href="football.html">Football</a></li>
+                        <li><a class="dropdown-item hoverr text-white" href="golf.html">Golf</a></li>
+                        <li><a class="dropdown-item hoverr text-white" href="tennis.html">Tennis</a></li>
+                    </ul>
+                </li>
+                <li class="hoverr nav-item">
+                    <a class="nav-link text-white" href="Watch-Live.html">Watch Live</a>
+                </li>
+                <li class="hoverr nav-item">
+                    <a class="nav-link text-white" href="Live-Scores.html">Live scores</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<!-- NOTE: CONTENT BEGINS HERE  -->
+
+
+
+
+
+ <!-- CONTENT -->
+ <div class="container">
+    <br>
+    <div class="row d-flex justify-content-center justify-content-evenly text-center secondnav p-2">
+        <div class="col-3 cricket h5 fw-bold"><a href="#cricketlivescores" class="p-2" style="text-decoration: none; color: black;">Cricket</a></div>
+        <div class="col-3 football h5 fw-bold"><a href="#footballlivescores" class="p-2" style="text-decoration: none; color: black;">Football</a></div>
+        <div class="col-3 tennis h5 fw-bold"><a href="#tennislivescores" class="p-2" style="text-decoration: none; color: black;">Tennis</a></div>
+        <div class="col-3 golf h5 fw-bold"><a href="#golflivescores" class="p-2" style="text-decoration: none; color: black;">Golf</a></div>
+    </div>
+ </div>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-12 mt-5 pt-4"><h1>CRICKET | LIVE SCORES</h1><img src="https://static.toiimg.com/thumb/msid-95497232,width-1280,height-720,resizemode-4/95497232.jpg" alt="BenStokes" width="100%" height="auto" class="border border-2 border-dark"></div>
+    </div>
+</div>
+
+
+ <div class="container">
+    <!-- Cricket Section -->
+    <div class="content-section">
+        <div class="card">
+            <div class="card-header" id="cricketlivescores">
+                <h2>Cricket Live Scores</h2>
+            </div>
+            <div class="card-body">
+                <div class="score">
+                    <h5>Match 1: India vs Netherlands</h5>
+                    <p>India: 250/7 (50 overs)</p>
+                    <p>Netherlands: 220/8 (45 overs)</p>
+                </div>
+                <div class="score">
+                    <h5>Match 2: Bangladesh vs England</h5>
+                    <p>England: 300/5 (50 overs)</p>
+                    <p>Bangladesh: 280/9 (50 overs)</p>
+                </div>
+                <div class="score">
+                    <h5>Match 3: Pakistan vs England</h5>
+                    <p>England: 350/5 (50 overs)</p>
+                    <p>Pakistan: 100/9 (50 overs)</p>
+                </div>
+                <div class="score">
+                    <h5>Match 4: Bangladesh vs India</h5>
+                    <p>India: 275/7 (50 overs)</p>
+                    <p>Bangladesh: 277/5 (47.5 overs)</p>
+                </div>
+                <div class="score">
+                    <h5>Match 5: Zimbabwe vs PNG</h5>
+                    <p>Zimbabwe: 210/4 (50 overs)</p>
+                    <p>PNG: 80/10 (10 overs)</p>
+                </div>
+                <div class="score">
+                    <h5>Match 6: Australia vs South Africa</h5>
+                    <p>Australia: 320/6 (50 overs)</p>
+                    <p>South Africa: 310/9 (50 overs)</p>
+                </div>
+                <div class="score">
+                    <h5>Match 7: New Zealand vs Sri Lanka</h5>
+                    <p>New Zealand: 280/7 (50 overs)</p>
+                    <p>Sri Lanka: 250/10 (48 overs)</p>
+                </div>
+                <div class="score">
+                    <h5>Match 8: West Indies vs Afghanistan</h5>
+                    <p>West Indies: 260/8 (50 overs)</p>
+                    <p>Afghanistan: 240/9 (50 overs)</p>
+                </div>
+                <div class="score">
+                    <h5>Match 9: Pakistan vs Australia</h5>
+                    <p>Australia: 300/7 (50 overs)</p>
+                    <p>Pakistan: 280/9 (50 overs)</p>
+                </div>
+                <div class="score">
+                    <h5>Match 10: India vs Sri Lanka</h5>
+                    <p>India: 275/6 (50 overs)</p>
+                    <p>Sri Lanka: 255/10 (48.3 overs)</p>
+                </div>
+                <div class="score">
+                    <h5>Match 11: England vs South Africa</h5>
+                    <p>England: 290/7 (50 overs)</p>
+                    <p>South Africa: 280/10 (49.5 overs)</p>
+                </div>
+                <div class="score">
+                    <h5>Match 12: Bangladesh vs New Zealand</h5>
+                    <p>Bangladesh: 220/9 (50 overs)</p>
+                    <p>New Zealand: 215/10 (49.3 overs)</p>
+                </div>
+                <div class="score">
+                    <h5>Match 13: West Indies vs Pakistan</h5>
+                    <p>West Indies: 240/8 (50 overs)</p>
+                    <p>Pakistan: 230/10 (49 overs)</p>
+                </div>
+                <div class="score">
+                    <h5>Match 14: Afghanistan vs Zimbabwe</h5>
+                    <p>Afghanistan: 260/6 (50 overs)</p>
+                    <p>Zimbabwe: 240/9 (50 overs)</p>
+                </div>
+                <div class="score">
+                    <h5>Match 15: Sri Lanka vs West Indies</h5>
+                    <p>Sri Lanka: 275/5 (50 overs)</p>
+                    <p>West Indies: 270/8 (50 overs)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+        <!-- Football Section -->
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12 mt-5 pt-4"><h1>FOOTBALL | LIVE SCORES</h1><img src="https://cloudfront-us-east-2.images.arcpublishing.com/reuters/NVF4ACAGHZKUPONT44UEE4VW4Y.jpg" alt="Haaland" width="100%" height="auto" class="border border-2 border-dark"></div>
+        </div>
+    </div>
+
+
+    <div class="content-section">
+        <div class="card">
+            <div class="card-header" id="footballlivescores">
+                <h2>Football Live Scores</h2>
+            </div>
+            <div class="card-body">
+                <div class="score">
+                    <h5>Match 1: Spain vs England</h5>
+                    <p>Spain: 2</p>
+                    <p>England: 1</p>
+                </div>
+                <div class="score">
+                    <h5>Match 2: France vs Nigeria</h5>
+                    <p>Nigeria: 1</p>
+                    <p>France: 5</p>
+                </div>
+                <div class="score">
+                    <h5>Match 3: Brazil vs Argentina</h5>
+                    <p>Brazil: 3</p>
+                    <p>Argentina: 2</p>
+                </div>
+                <div class="score">
+                    <h5>Match 4: Germany vs Italy</h5>
+                    <p>Germany: 1</p>
+                    <p>Italy: 1</p>
+                </div>
+                <div class="score">
+                    <h5>Match 5: Portugal vs Netherlands</h5>
+                    <p>Portugal: 2</p>
+                    <p>Netherlands: 0</p>
+                </div>
+                <div class="score">
+                    <h5>Match 6: Belgium vs Croatia</h5>
+                    <p>Belgium: 4</p>
+                    <p>Croatia: 1</p>
+                </div>
+                <div class="score">
+                    <h5>Match 7: Mexico vs USA</h5>
+                    <p>Mexico: 2</p>
+                    <p>USA: 2</p>
+                </div>
+                <div class="score">
+                    <h5>Match 8: Japan vs South Korea</h5>
+                    <p>Japan: 1</p>
+                    <p>South Korea: 3</p>
+                </div>
+                <div class="score">
+                    <h5>Match 9: Russia vs Poland</h5>
+                    <p>Russia: 0</p>
+                    <p>Poland: 2</p>
+                </div>
+                <div class="score">
+                    <h5>Match 10: Uruguay vs Chile</h5>
+                    <p>Uruguay: 3</p>
+                    <p>Chile: 2</p>
+                </div>
+                <div class="score">
+                    <h5>Match 11: Spain vs Portugal</h5>
+                    <p>Spain: 2</p>
+                    <p>Portugal: 1</p>
+                </div>
+                <div class="score">
+                    <h5>Match 12: England vs Germany</h5>
+                    <p>England: 1</p>
+                    <p>Germany: 3</p>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+
+        <!-- Tennis Section -->
+    <div class="container">
+        <div class="row">
+            <div class="col-12 mt-5 pt-4"><h1>TENNIS | LIVE SCORES</h1><img src="https://media.newyorker.com/photos/65b6900ffa473141732cfa95/master/pass/GettyImages-1967613685.jpg" alt="Sinner" width="100%" height="auto" class="border border-2 border-dark"></div>
+        </div>
+    </div>
+
+
+    <div class="content-section">
+        <div class="card">
+            <div class="card-header" id="tennislivescores"c>
+                <h2>Tennis Live Scores</h2>
+            </div>
+            <div class="card-body">
+                <div class="score">
+                    <h5>Match 1: Jannik Sinner vs Carlos Alcaraz</h5>
+                    <p>Jannik Sinner: 6-3, 5-7, 6-4</p>
+                    <p>Carlos Alcaraz: 3-6, 7-5, 4-6</p>
+                </div>
+                <div class="score">
+                    <h5>Match 2: Taylor Fritz vs Alexander Zverev</h5>
+                    <p>Taylor Fritz: 6-2, 6-4</p>
+                    <p>Alexander Zverev: 2-6, 4-6</p>
+                </div>
+                <div class="score">
+                    <h5>Match 3: Novak Djokovic vs Daniil Medvedev</h5>
+                    <p>Novak Djokovic: 6-4, 7-6</p>
+                    <p>Daniil Medvedev: 4-6, 6-7</p>
+                </div>
+                <div class="score">
+                    <h5>Match 4: Rafael Nadal vs Stefanos Tsitsipas</h5>
+                    <p>Rafael Nadal: 6-3, 3-6, 6-3</p>
+                    <p>Stefanos Tsitsipas: 3-6, 6-3, 3-6</p>
+                </div>
+                <div class="score">
+                    <h5>Match 5: Andy Murray vs Dominic Thiem</h5>
+                    <p>Andy Murray: 7-5, 6-2</p>
+                    <p>Dominic Thiem: 5-7, 2-6</p>
+                </div>
+                <div class="score">
+                    <h5>Match 6: Casper Ruud vs Felix Auger-Aliassime</h5>
+                    <p>Casper Ruud: 6-4, 4-6, 7-5</p>
+                    <p>Felix Auger-Aliassime: 4-6, 6-4, 5-7</p>
+                </div>
+                <div class="score">
+                    <h5>Match 7: Matteo Berrettini vs Denis Shapovalov</h5>
+                    <p>Matteo Berrettini: 6-7, 6-4, 7-6</p>
+                    <p>Denis Shapovalov: 7-6, 4-6, 6-7</p>
+                </div>
+                <div class="score">
+                    <h5>Match 8: Andrey Rublev vs Hubert Hurkacz</h5>
+                    <p>Andrey Rublev: 6-3, 6-7, 6-4</p>
+                    <p>Hubert Hurkacz: 3-6, 7-6, 4-6</p>
+                </div>
+                <div class="score">
+                    <h5>Match 9: Diego Schwartzman vs Roberto Bautista Agut</h5>
+                    <p>Diego Schwartzman: 6-2, 3-6, 6-4</p>
+                    <p>Roberto Bautista Agut: 2-6, 6-3, 4-6</p>
+                </div>
+                <div class="score">
+                    <h5>Match 10: Gael Monfils vs Kei Nishikori</h5>
+                    <p>Gael Monfils: 6-4, 7-5</p>
+                    <p>Kei Nishikori: 4-6, 5-7</p>
+                </div>
+                <div class="score">
+                    <h5>Match 11: Karen Khachanov vs John Isner</h5>
+                    <p>Karen Khachanov: 7-6, 6-4</p>
+                    <p>John Isner: 6-7, 4-6</p>
+                </div>
+                <div class="score">
+                    <h5>Match 12: Stan Wawrinka vs Marin Cilic</h5>
+                    <p>Stan Wawrinka: 6-3, 3-6, 7-5</p>
+                    <p>Marin Cilic: 3-6, 6-3, 5-7</p>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Golf Section -->
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12 mt-5 pt-4"><h1>GOLF | LIVE SCORES</h1><img src="https://golf.com/wp-content/uploads/2024/03/scottie-scheffler-swings.jpg" alt="Sinner" width="100%" height="auto" class="border border-2 border-dark"></div>
+        </div>
+    </div>
+
+
+    <div class="content-section">
+        <div class="card">
+            <div class="card-header" id="golflivescores">
+                <h2>Golf Live Scores</h2>
+            </div>
+            <div class="card-body">
+                <div class="score">
+                    <h5>Scottie Scheffler</h5>
+                    <p>Score: -4</p>
+                </div>
+                <div class="score">
+                    <h5>Xander Schauffele</h5>
+                    <p>Score: -2</p>
+                </div>
+                <div class="score">
+                    <h5>Rory McIlroy</h5>
+                    <p>Score: -6</p>
+                </div>
+                <div class="score">
+                    <h5>Justin Thomas</h5>
+                    <p>Score: -3</p>
+                </div>
+                <div class="score">
+                    <h5>Jon Rahm</h5>
+                    <p>Score: -5</p>
+                </div>
+                <div class="score">
+                    <h5>Patrick Cantlay</h5>
+                    <p>Score: -2</p>
+                </div>
+                <div class="score">
+                    <h5>Collin Morikawa</h5>
+                    <p>Score: -4</p>
+                </div>
+                <div class="score">
+                    <h5>Brooks Koepka</h5>
+                    <p>Score: -1</p>
+                </div>
+                <div class="score">
+                    <h5>Hideki Matsuyama</h5>
+                    <p>Score: -3</p>
+                </div>
+                <div class="score">
+                    <h5>Webb Simpson</h5>
+                    <p>Score: -2</p>
+                </div>
+                <div class="score">
+                    <h5>Louis Oosthuizen</h5>
+                    <p>Score: -5</p>
+                </div>
+                <div class="score">
+                    <h5>Adam Scott</h5>
+                    <p>Score: -1</p>
+                </div>
+            </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+     <!-- footer -->
+     
+<footer class="container-fluid text-white mt-5 footercontainermain">
+    <div class="container-fluid py-5">
+        <!-- Social Media Links -->
+        <div class="row text-center text-md-start justify-content-center">
+            <div class="col-12 col-md-4 d-flex justify-content-center justify-content-md-start align-items-center mb-3">
+                <div class="iconssss me-3 text-center">
+                    <a href="https://www.facebook.com/YourPage" style="text-decoration: none; color: white;"><i class="fa-brands fa-facebook p-2 fs-3"></i>
+                        <p class="mb-0">Facebook</p></a>
+                </div>
+                <div class="ia me-3 text-center">
+                    <a href="https://www.instagram.com/YourUsername/" style="text-decoration: none; color: white;"><i class="fa-brands fa-instagram p-2 fs-3"></i>
+                        <p class="mb-0">Instagram</p></a>
+                </div>
+                <div class="ib text-center">
+                   <a href="https://www.linkedin.com/in/your-profile" style="text-decoration: none; color: white;"> <i class="fa-brands fa-linkedin p-2 fs-3"></i>
+                    <p class="mb-0">LinkedIn</p></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="bottomline mb-4"></div>
+<!-- Partners and Channels -->
+<div class="row d-flex justify-content-center">
+    <div class="col-12 col-md-3 text-center text-md-start">
+        <div class="partners ">
+            <h5 class="text-secondary">Partners</h5>
+            <p class="hover3"><a href="https://www.youtube.com/watch?v=R1UrU0WhP2M" style="text-decoration: none; color: white;">Bet With SportSphere</a></p>
+            <p class="hover3"><a href="https://fantasy.premierleague.com/" style="text-decoration: none; color: white;">Fantasy Football</a></p>
+        </div>
+    </div>
+    <div class="col-12 col-md-4 text-center text-md-start">
+        <div class="channels p-2">
+            <h5 class="text-secondary">Sports Sphere Channels</h5>
+            <p class="hover"><a href="cricket.html" style="text-decoration: none; color: white;">Cricket</a></p>
+            <p class="hover"><a href="football.html" style="text-decoration: none; color: white;">Football</a></p>
+            <p class="hover"><a href="golf.html" style="text-decoration: none; color: white;">Golf</a></p>
+            <p class="hover"><a href="tennis.html" style="text-decoration: none; color: white;">Tennis</a></p>
+        </div>
+    </div>
+    <div class="col-12 col-md-3 text-center text-md-start">
+        <div class="channels p-2">
+            <h5 class="text-secondary">Watch</h5>
+            <p class="hover"><a href="https://www.youtube.com/watch?v=V4m_jTOCSfQ" style="color: white; text-decoration: none;">Watch Cricket</a></p>
+            <p class="hover"><a href="https://www.youtube.com/watch?v=K5fFRjvm0-E" style="text-decoration: none; color: white;">Watch Football</a></p>
+            <p class="hover"><a href="https://www.youtube.com/watch?v=K5fFRjvm0-E" style="text-decoration: none; color: white;">Watch Tennis</a></p>
+            <p class="hover"><a href="https://www.youtube.com/watch?v=K5fFRjvm0-E" style="text-decoration: none; color: white;">Watch Golf</a></p>
+        </div>
+    </div>
+</div>
+        <div class="bottomline my-4"></div>
+
+        <!-- Footer Bottom Links -->
+        <div class="row justify-content-center">
+            <div class="col-12 d-flex flex-wrap justify-content-center">
+                <p class="hover12 me-4 mb-2"><a href="#" style="text-align: none; color: white;">Terms & Conditions</a></p>
+                <p class="hover1 me-4 mb-2"><a href="#" style="text-align: none; color: white;">Privacy & Cookies Notice</a></p>
+                <p class="hover1 me-4 mb-2"><a href="#" style="text-align: none; color: white;">Accessibility Information</a></p>
+            </div>
+        </div>
+
+        <!-- Footer Copyright -->
+        <div class="row">
+            <div class="col-12 text-center">
+                <p class="CCC mb-0">Sports Sphere &copy; 2024 Sport UK | Created By Talal and Bilal</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js", integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+", crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js", integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+", crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/js/all.min.js" integrity="sha512-6sSYJqDreZRZGkJ3b+YfdhB3MzmuP9R7X1QZ6g5aIXhRvR1Y/N/P47jmnkENm7YL3oqsmI6AK+V6AD99uWDnIw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+</html>

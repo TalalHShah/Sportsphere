@@ -1,0 +1,492 @@
+/* CSS Variables for Color Scheme */
+:root {
+    --primary-color: #00172e; /* Dark Blue */
+    --secondary-color: #f311ff; /* Changed to Pink Bro */
+    --text-color: #d1d1d1; /* White */
+    --hover-color: #f311ff; /* Changed to Pink Brooooo */
+    --link-hover-color: #1b55c7; /* Light Blue */
+    --bg-light-grey: #f8f9fa; /* Light Grey Background */
+}
+
+/* General Styles */
+body {
+    background-color: rgb(229, 229, 229);
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+h1, h2 {
+    font-family: 'Lilita One', cursive;
+}
+
+.h1:hover {
+    color: var(--bg-dark-grey);
+    text-decoration: underline;
+}
+
+.bg {
+    background-color: var(--primary-color);
+}
+
+.bgf {
+    background-color: var(--secondary-color);
+}
+
+.btnss {
+    padding: 0 10px;
+    margin: 7px;
+    background-color: var(--secondary-color);
+    border: none;
+    border-radius: 20px;
+    color: black;
+    transition: background-color 0.3s;
+}
+
+.btnss:hover {
+    background-color: #ff7700;
+}
+
+.iconssss,
+.ia,
+.ib {
+    width: 120px;
+    display: inline-block;
+    transition: color 0.3s;
+}
+
+.iconssss:hover {
+    color: var(--link-hover-color);
+}
+
+.ia:hover {
+    color: #E1306C;
+}
+
+.ib:hover {
+    color: #0077B5;
+}
+
+.bottomline {
+    border-top: 1px solid;
+    width: 100%;
+    height: 1px;
+}
+
+.hover, .hover1, .hover3, .hover12 {
+    padding: 2px 5px;
+    margin-bottom: 0;
+    transition: background-color 0.3s, color 0.3s;
+    cursor: pointer;
+}
+
+.hover1, .hover12 {
+    padding: 2px 10px;
+}
+
+.hover:hover, .hover1:hover, .hover3:hover, .hover12:hover {
+    color: rgb(0, 0, 0);
+    background-color: #f311ff;
+    transform: scale(1.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.partners, .channels {
+    display: inline-block;
+}
+
+.bgg {
+    background-color: #00172e;
+}
+
+.virat {
+    height: auto;
+    width: 50%;
+}
+
+/* Responsive Styles */
+@media (max-width: 767.98px) {
+    /* Mobile Styles */
+    .iconssss, .ia, .ib {
+        width: 100%;
+        text-align: center;
+    }
+
+    .bottomline {
+        display: none;
+    }
+
+    .hover, .hover3 {
+        width: 100%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    /* Tablet Styles */
+    .iconssss, .ia, .ib {
+        width: 150px;
+    }
+
+    .hover {
+        width: 220px;
+    }
+
+    .hover3 {
+        width: 150px;
+    }
+}
+
+/* Content Styles */
+.content h2 {
+    font-weight: 500;
+    margin-top: 15px;
+}
+
+.content p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.5;
+}
+
+.hoverr:hover {
+    background-color: black;
+    color: white !important;
+}
+
+.img-fluid {
+    width: 100%;
+    height: auto;
+    max-height: 500px;
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    .content h2 {
+        font-size: 1.5rem;
+    }
+
+    .content p {
+        font-size: 0.9rem;
+    }
+}
+
+
+
+
+
+
+/* CONTENT OF THE PAGE */
+
+body {
+    margin: 0;
+    padding: 0;
+    background: radial-gradient(rgb(183, 228, 255), rgb(255, 255, 255), rgb(183,228,255));
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.mainarticle { 
+    height: 100%;
+    border: 4px solid rgba(130, 157, 175, 0.645);
+    background-color: white;
+    position: relative;
+    overflow: hidden;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.mainarticle:hover, .mainarticlecontent:hover {
+    background-color: #00172e;
+    transition: all 0.5s ease-in-out;
+}
+
+.mainarticlepiccontainer {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url("spainwinner.jpg") no-repeat center center;
+    background-size: cover;
+    transition: transform 0.5s ease-in-out;
+    z-index: 1;
+}
+
+.mainarticle:hover .mainarticlepiccontainer {
+    transform: scale(1.1);
+}
+
+.mainarticlecontent {
+    z-index: 4;
+    background-color: rgb(255, 255, 255);
+    height: 100%;
+    padding: 30px;
+}
+
+
+.livesection {
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.livesection a {
+    color: blue;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: lighter;
+}
+
+.livesection a:hover {
+    color: black;
+    text-decoration: underline;
+}
+
+.mainarticle:hover::before, .mainarticle:hover::after {
+    content: '';
+    position: absolute;
+    height: 5px;
+    width: 100%;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0) 100%);
+}
+
+.mainarticle:hover .mainarticlecontent {
+    background-color: #fdd5ff;;
+}
+
+.mainarticleheading h1 {
+    font-size: 22px;
+    margin-left: 10px;
+}
+
+.mainarticlelinkone {
+    margin-left: 10px;
+    font-size: 15px;
+    font-weight: lighter;
+    margin-top: 40px;
+}
+
+.mainarticlelinktwo {
+    margin-left: 10px;
+    font-size: 15px;
+    font-weight: lighter;
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+.angleoffontawesome {
+    font: 100px;
+}
+
+.secondrowofarticles {
+    height: auto;
+}
+
+.thefirstarticlepicture {
+    width: 100%;
+    height: 250px;
+    background: url("benstokes.jpeg");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.livesection {
+    margin-top: 25px;
+    margin-left: 10px;
+}
+
+.livesection a {
+    color: blue;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: lighter;
+}
+
+.livesection a:hover {
+    color: black;
+    text-decoration: underline;
+}
+
+
+
+/* THE FIRST ARTICLE  */
+
+.thefirstarticle { 
+    height: 600px;
+    border: 4px solid rgba(130, 157, 175, 0.645);
+    background-color: white;
+    position: relative;
+    overflow: hidden;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.thefirstarticle:hover, .thefirstarticlecontent:hover {
+    background-color: rgb(215, 240, 255);
+    transition: all 0.5s ease-in-out;
+}
+
+.thefirstarticlepicture {
+    position: relative;
+    width: 100%;
+    margin-left: 0px;
+    height: 250px;
+    background: url("benstokes.jpeg") no-repeat center center;
+    background-size: cover;
+    transition: transform 0.5s ease-in-out;
+    z-index: 1;
+}
+
+.thefirstarticle:hover .thefirstarticlepicture {
+    transform: scale(1.1);
+}
+
+.thefirstarticlecontent {
+    position: relative;
+    height: 100%;
+    margin-top: -25px;
+    z-index: 4;
+    background-color: rgb(255, 255, 255);
+}
+
+.col-3 {
+    padding: 0;
+    margin: 0;
+}
+
+.thefirstarticle:hover .thefirstarticlecontent {
+    background-color: rgb(215, 240, 255);
+}
+
+
+
+
+/* THE SECOND ARTICLE */
+
+.thesecondarticle {
+    height: 600px;
+    border: 4px solid rgba(130, 157, 175, 0.645);
+    background-color: white;
+    position: relative;
+    overflow: hidden;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.picture-wrapper {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+}
+
+.thesecondarticlecontent {
+    height: 100%;
+    margin-top: -25px;
+}
+
+.thesecondarticlepicture {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("viratkohli.jpeg") no-repeat center center;
+    background-size: cover;
+    transition: transform 0.5s ease-in-out;
+    z-index: 1;
+    transform-origin: center;
+}
+
+.thesecondarticle:hover .thesecondarticlepicture {
+    transform: scale(1.1);
+}
+
+.thesecondarticle:hover, .thesecondarticlecontent:hover {
+    background-color: rgb(215, 240, 255);
+    transition: all 0.5s ease-in-out;
+    z-index: 3;
+}
+
+.thesecondarticle:hover .thesecondarticlecontent {
+    background-color: rgb(215, 240, 255);
+}
+
+
+/* THE THIRD ARTICLE */
+
+.thethirdarticle {
+    height: 600px;
+    border: 4px solid rgba(130, 157, 175, 0.645);
+    background-color: white;
+    position: relative;
+    overflow: hidden;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.picture-wrapper {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+}
+
+.thethirdarticlecontent {
+    height: 100%;
+    margin-top: -25px;
+}
+
+.thethirdarticlepicture {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("babarazam.jpeg") no-repeat center center;
+    background-size: cover;
+    transition: transform 0.5s ease-in-out;
+    z-index: 1;
+    transform-origin: center;
+}
+
+.thethirdarticle:hover .thethirdarticlepicture {
+    transform: scale(1.1);
+}
+
+.thethirdarticle:hover .thethirdarticlecontent {
+    background-color: rgb(215, 240, 255);
+}
+
+.thethirdarticle:hover, .thethirdarticlecontent:hover {
+    background-color: rgb(215, 240, 255);
+    transition: all 0.5s ease-in-out;
+    z-index: 3;
+}
+
+
+
+
+
+.ourpublishersbackground {
+    background-color: rgba(54, 54, 54, 0.366);
+    width: 100%;
+    height: auto;
+}
+
+
+
+
+
+
+footer {
+    width: 100%;
+    position: relative;
+    background-color: var(--primary-color); /* Use your primary color or any other desired color */
+}
+
+footer .container-fluid {
+    max-width: 100%; /* Ensure the container inside the footer spans full width */
+    padding: 0; /* Remove padding to allow full-width styling */
+}
+
+footer .row {
+    margin: 0; /* Remove margins to ensure full width */
+}
+
+
